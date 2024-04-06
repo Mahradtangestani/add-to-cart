@@ -4,7 +4,7 @@ import Main from './Main';
 
 function App() {
   return (
-    <div className="">
+    <div className="bg-slate-50 h-screen">
         <Main/>
     </div>
   );
