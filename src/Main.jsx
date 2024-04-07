@@ -34,12 +34,13 @@ const Main = () => {
     }
 
     return (
-        <div className='flex flex-wrap justify-center items-center gap-20 p-10 sm:pr-96 pr-52'>
+        
+        <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center gap-20 p-10 sm:pr-96 pr-52'>
             {PRODUCTS.map(product => (
                 <div key={product.id} className='flex flex-col items-center'>
                     <img className='w-40 h-40 object-contain' src={product.productImage} alt={product.productName} />
-                    <p className='sm:text-base text-xs'>{product.productName}</p>
-                    <p className='sm:text-base text-xs'>${product.price}</p>
+                    <p className='sm:text-base text-xs text-green-700'>{product.productName}</p>
+                    <p className='sm:text-base text-xs font-bold'>${product.price}</p>
                     <button onClick={()=> addToCart(product.id)} className='sm:text-base text-xs border-2 border-gray-400 drop-shadow-2xl p-2 hover:bg-green-300 rounded-lg'>Add To Cart</button>
                 </div>
             ))}
